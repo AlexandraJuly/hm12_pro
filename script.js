@@ -60,12 +60,10 @@ function test(users) {
     let arrPhoneBalance = [];
     users.forEach(element => {
         sum += +element.balance.replace('$', '').replace(',', '');         
-        
         if (+element.balance.replace('$', '').replace(',', '') > 2000.00) {
             arrPhoneBalance.push(element.phone)
         }
     });
-    
     return {
         sum: sum.toFixed(2), 
         phones: arrPhoneBalance
