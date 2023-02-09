@@ -55,26 +55,6 @@ const users = [
     }
 ]
 
-function balance(key, arr, func) {
-    for(let item of arr) {
-        func(item[key]);
-    }
-}
-
-balance('balance', users, function(item){
-    const itemS = item.split("$").join("");
-    let newStr = itemS.replaceAll(/,/g,"");
-    let num = Number(newStr);
-    console.log(num); 
-    for (let i = 0; i < num; i++) {
-        if (num > 2000) {
-            
-        }
-    }
-})
-
-let sum = 0.0;
-
 function test(users) {
     let sum = 0;
     let arrPhoneBalance = [];
@@ -87,9 +67,8 @@ function test(users) {
     });
     
     return {
-        sumBalanceUsers: sum.toFixed(2), 
-        listOfPhoneSortByLimit: arrPhoneBalance
+        sum: sum.toFixed(2), 
+        phones: arrPhoneBalance
 }
 } 
 console.log(test(users));
-
